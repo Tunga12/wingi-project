@@ -1,0 +1,57 @@
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group">
+          <input type="text" class="form-control mr-2" placeholder="Search" [(ngModel)]="searchQuery">
+          <div class="input-group-append">
+            <span class="input-group-text" id="search-icon"><i class="bi bi-search"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <select class="form-control" [(ngModel)]="selectedCategory">
+          <option value="">All categories</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+      <div class="col-md-4 text-md-right mt-3 mt-md-0">
+        <button class="btn btn-success mb-2 mb-md-0" routerLink="/product-form/new" >Add new</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of filterProducts()">
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>
+                <div class="btn-group" role="group">
+
+                <button class="btn btn-sm btn-primary mr-2" routerLink="/product-form/{{ product.id }}">Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)" >Delete</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
