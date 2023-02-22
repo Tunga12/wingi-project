@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
-## Development server
+## Local Setup
 
+Download the zip folder, unzip it, run `npm install`
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Live App
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Go to this link: `https://tunga12.github.io/wingi-project/product`
 
-## Build
+## Architecture
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The app contains three components:
+1. ListingComponent: Where all the products are listed, search by name and filter by category
+2. ProductFormComponent: To add and edit products
 
-## Running unit tests
+It has one model
+1. Product
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+It has one service
+1. the product service: add, edit, delete, search by name, filter by category, getUniqueCategories
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
