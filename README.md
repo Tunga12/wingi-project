@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Live App
 
-Go to this link: `https://tunga12.github.io/wingi-project/product`
+Go to this link: https://tunga12.github.io/wingi-project/product
 
 ## Architecture
 
